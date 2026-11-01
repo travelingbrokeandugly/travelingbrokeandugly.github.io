@@ -1,0 +1,22 @@
+title: Traveling Broke and Ugly
+description: Personal travel stories and adventures.
+url: "https://travelingbrokeandugly.org"
+baseurl: ""
+permalink: /blog/:title/
+paginate: 5
+paginate_path: "/blog/page:num/"
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-paginate
+sass:
+  style: compressed
+navigation:
+  - title: Home
+    url: /
+  - title: Articles
+    url: /articles/
+  - title: About
+    url: /about/
+social: {}
+disqus: {}
