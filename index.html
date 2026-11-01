@@ -1,0 +1,5 @@
+---
+layout: default
+title: Home
+---
+<div class="home" id="home"><h1 class="pageTitle">Recent Posts</h1>{% if site.posts.size == 0 %}<p>Traveling Broke and Ugly is taking shape. Stories coming soon.</p>{% else %}<div class="posts noList">{% for post in paginator.posts %}<article><span class="date">{{ post.date | date: '%B %d, %Y' }}</span><h3><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a></h3><p>{{ post.description | default: post.excerpt | strip_html }}</p></article>{% endfor %}</div><div class="pagination">{% if paginator.previous_page %}<a class="previous button__outline" href="{{ paginator.previous_page_path | relative_url }}">Newer Posts</a>{% endif %}{% if paginator.next_page %}<a class="next button__outline" href="{{ paginator.next_page_path | relative_url }}">Older Posts</a>{% endif %}</div>{% endif %}</div>
